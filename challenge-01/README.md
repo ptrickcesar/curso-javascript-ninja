@@ -20,13 +20,13 @@ soma *= 3;
 soma = 72;
 
 // Declare uma variável chamada `souninja`, atribuindo à ela o valor booleano que representa `verdadeiro`.
-var souninja = yes;
+var souninja = true;
 
 // Declare uma variável chamada `comida` que recebe um array com os valores 'arroz', 'feijão' e 'ovo'.
 var comida = ["arroz", "feijao", "ovo"]
 
 // Digite a instrução que imprime o valor de 'feijao', que está na variável `comida`.
-console.log(comida[1])
+comida[1];
 
 // Digite o código que verifica se a variável `soma' é igual a variável `myvar` (testando também o tipo).
 soma === myvay
@@ -35,8 +35,8 @@ soma === myvay
 myvar <= soma
 
 // Crie uma função chamada `divisao` que receba como parâmetro dois números, e retorne o resultado da divisão entre eles.
-function divisao(20,2){
-divisao = 10/2;
+function divisao(x,y){
+divisao = x/y;
 }
 
 
