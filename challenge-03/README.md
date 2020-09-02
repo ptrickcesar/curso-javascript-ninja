@@ -25,7 +25,7 @@ for chamado.
 */
 pessoa.fazerAniversario = function (){
 return pessoa.idade++;
-}
+};
 /*
 Adicione um método ao objeto `pessoa` chamado `andar`, que terá as seguintes
 características:
@@ -39,87 +39,87 @@ booleano que representa "verdadeiro";
 pessoa.andar = function(metros){
 pessoa.caminhouQuantosMetros += metros;
 pessoa.andando = metros > 0;
-}
+};
 
 /*
 Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o valor
 da propriedade `andando` para o valor booleano que representa "falso".
 */
 pessoa.parar = function (metros){
-pessoa.caminhouQuantosMetros = 0;
-pessoa.andando = metros < 0;
-}
+pessoa.andando = false;
+};
 
 
 /*
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
-nomeCompleto = function (){
-... return "Olá meu nome é " + pessoa.nome + ' ' + pessoa.sobrenome +"!";
-... }
+pessoa.nomeCompleto = function (){
+return "Olá meu nome é " + pessoa.nome + ' ' + pessoa.sobrenome +"!";
+};
 
 
 /*
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
-mostraIdade = function(){
-... return "Olá, eu tenho " + pessoa.idade + ' ' + "anos!";
-... }
+pessoa.mostraIdade = function(){
+return "Olá, eu tenho " + pessoa.idade + ' ' + "anos!";
+};
 
 
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
 - "Eu peso [PESO]Kg."
 */
-mostraPeso = function () {
-... return "Eu peso " + pessoa.peso +"Kg.";
-... }
+pessoa.mostraPeso = function () {
+return "Eu peso " + pessoa.peso +"Kg.";
+};
 
 /*
 Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
-mostraAltura = function(){
-... return "Minha altura é "+ pessoa.altura + "m."; 
-... }
+pessoa.mostraAltura = function(){
+return "Minha altura é "+ pessoa.altura + "m."; 
+};
 
 /*
 Agora vamos brincar um pouco com o objeto criado:
 Qual o nome completo da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-nomeCompleto(); //'Olá meu nome é Patrick Cesar!'
+pessoa.nomeCompleto(); //'Olá meu nome é Patrick Cesar!'
 
 /*
 Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-mostraIdade(); //'Olá, eu tenho 28 anos!'
+pessoa.mostraIdade(); //'Olá, eu tenho 28 anos!'
 
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
- mostraPeso(); //'Eu peso 69Kg.'
+pessoa.mostraPeso(); //'Eu peso 69Kg.'
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-mostraAltura(); //'Minha altura é 1.7m.'
+pessoa.mostraAltura(); //'Minha altura é 1.7m.'
 
 /*
 Faça a `pessoa` fazer 3 aniversários.
 */
-pessoa.fazerAniversario(3);
-
+pessoa.fazerAniversario();
+pessoa.fazerAniversario();
+pessoa.fazerAniversario();
 /*
 Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
 comentários inline ao lado da instrução para mostrar qual foi a resposta
 retornada)
 */
-mostraIdade();
+pessoa.mostraIdade();
 'Olá, eu tenho 31 anos!'
 
 /*
@@ -169,8 +169,26 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+pessoa.apresentacao = function () {
+  var sexo = 'o';
+  var idadeAnos = 'anos';
+  var metrosCaminhados = 'metros';
+
+  if (pessoa.sexo === 'Feminino') {
+    sexo = 'a';
+  }
+
+  if (pessoa.idade === 1) {
+    idadeAnos = 'ano';
+  }
+
+  if (pessoa.caminhouQuantosMetros === 1) {
+    metrosCaminhados = 'metro';
+  }
+
+  return 'Olá, eu sou ' + sexo + ' ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ' + idadeAnos + ', ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' ' + metrosCaminhados + '!';
+};
 
 // Agora, apresente-se ;)
-?
+pessoa.apresentacao();
 ```
